@@ -37,8 +37,8 @@
     .profile{position:absolute;inset:26px;display:flex;flex-direction:column;justify-content:space-between}.monogram{width:76px;height:76px;border-radius:22px;display:grid;place-items:center;font-family:'Playfair Display';font-size:34px;font-weight:700;font-style:italic;background:linear-gradient(135deg,var(--c1),var(--c5));color:#041525;box-shadow:0 15px 50px rgba(73,198,255,.2)}
     .profile h2{font-family:'Playfair Display';font-size:42px;margin:0 0 6px}.profile .meta{color:var(--muted);line-height:1.65;font-size:14px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{font-size:11px;color:#cdefff;border:1px solid var(--line);padding:7px 9px;border-radius:999px;background:rgba(255,255,255,.04)}
     section{padding:52px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:20px}.section-head h2{font-family:'Playfair Display';font-size:38px;margin:0}.section-head p{color:var(--muted);max-width:560px;margin:0;line-height:1.6;font-size:14px}
-    .tabs{display:flex;gap:8px;overflow:auto;padding:6px;background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:18px}.tab{border:0;background:transparent;color:var(--muted);padding:11px 15px;border-radius:12px;font:600 13px 'DM Sans';cursor:pointer;white-space:nowrap}.tab.active{background:linear-gradient(135deg,rgba(73,198,255,.18),rgba(94,234,212,.11));color:#eaffff;border:1px solid rgba(73,198,255,.2)}
-    .tab-panel{display:none}.tab-panel.active{display:block;animation:rise .35s ease}@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+    .tabs{display:flex;gap:8px;overflow:auto;padding:6px;background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:18px}.tab{border:0;background:transparent;color:var(--muted);padding:11px 15px;border-radius:12px;font:600 13px 'DM Sans';cursor:pointer;white-space:nowrap;display:inline-block}.tab.active{background:linear-gradient(135deg,rgba(73,198,255,.18),rgba(94,234,212,.11));color:#eaffff;border:1px solid rgba(73,198,255,.2)}
+    .tab-panel{display:none}.tab-panel.active{display:block;animation:rise .35s ease}.tab-panel:target{display:block;animation:rise .35s ease}@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{position:relative;padding:21px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(145deg,rgba(14,44,70,.72),rgba(7,28,47,.72));overflow:hidden;transition:.25s}.card:hover{transform:translateY(-4px);border-color:rgba(73,198,255,.4);box-shadow:0 20px 50px rgba(0,0,0,.22)}.card .num{font-size:11px;color:var(--c3);font-weight:800;letter-spacing:.1em}.card h3{margin:9px 0 7px;font-size:18px}.card p{color:var(--muted);font-size:13px;line-height:1.65;margin:0 0 15px}.file-link{display:inline-flex;gap:8px;align-items:center;font-size:12px;color:#bdeeff;font-weight:800}.file-link:hover{color:#fff}.tagrow{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:13px}.tag{font-size:10px;color:#a7c6d8;padding:5px 7px;border-radius:7px;background:rgba(255,255,255,.045)}
     .visual{display:grid;grid-template-columns:1.1fr .9fr;gap:15px}.poster{min-height:330px;background-size:cover;background-position:center;border-radius:22px;border:1px solid var(--line);overflow:hidden;position:relative}.poster .overlay{position:absolute;inset:auto 0 0;padding:24px;background:linear-gradient(transparent,rgba(2,14,25,.95))}.poster h3{font-family:'Playfair Display';font-size:28px;margin:0 0 5px}.poster p{margin:0;color:#b8cfdd;font-size:12px}.insight{display:grid;gap:15px}.stat{display:flex;align-items:baseline;justify-content:space-between;gap:15px}.stat strong{font-family:'Playfair Display';font-size:32px;color:var(--c1)}.stat span{color:var(--muted);font-size:12px;text-align:right}.quote{font-family:'Playfair Display';font-style:italic;font-size:23px;line-height:1.35;color:#dff8ff}
     .timeline{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.step{display:flex;gap:14px;padding:18px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025)}.step b{display:grid;place-items:center;min-width:35px;height:35px;border-radius:11px;background:rgba(73,198,255,.12);color:var(--c1)}.step h4{margin:0 0 5px}.step p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}
@@ -65,7 +65,7 @@
         <p>A semester-long digital archive of <b>e-waste governance, data analytics, recycling systems, circular economy studies, environmental tools and process innovation</b> — organised so every submitted task remains directly accessible from one clean portfolio.</p>
         <div class="actions">
           <a class="btn primary" href="#work">Explore the archive ↘</a>
-          <a class="btn ghost" href="https://e-waste-dashboard-maharashtra--sidefa3096.replit.app" target="_blank" rel="noopener">Open live Maharashtra tracker ↗</a>
+          <a class="btn ghost" href="maharashtra-tracker.html" target="_blank" rel="noopener">Open Maharashtra tracker ↗</a>
           <a class="btn ghost" href="https://github.com/Jayz-yours/E-WASTE-24102C0086-Jay-Keluskar-TE-CMPN-C" target="_blank" rel="noopener">GitHub repository ↗</a>
         </div>
       </div>
@@ -84,11 +84,11 @@
     <section id="work">
       <div class="section-head"><div><div class="eyebrow">THE SEMESTER ARCHIVE</div><h2>Everything, one interface.</h2></div><p>Use the tabs to jump between reports, spreadsheets, visual work, the live dashboard and the interactive LEED tool. All links assume the original files stay in the repository root exactly as uploaded.</p></div>
       <div class="tabs" role="tablist">
-        <button class="tab active" data-tab="core">Core E-Waste</button>
-        <button class="tab" data-tab="analytics">Analytics & Trackers</button>
-        <button class="tab" data-tab="systems">Processes & Design</button>
-        <button class="tab" data-tab="sustainability">LEED & Carbon</button>
-        <button class="tab" data-tab="casestudies">Case Studies</button>
+        <a class="tab active" href="#core" data-tab="core">Core E-Waste</a>
+        <a class="tab" href="#analytics" data-tab="analytics">Analytics & Trackers</a>
+        <a class="tab" href="#systems" data-tab="systems">Processes & Design</a>
+        <a class="tab" href="#sustainability" data-tab="sustainability">LEED & Carbon</a>
+        <a class="tab" href="#casestudies" data-tab="casestudies">Case Studies</a>
       </div>
 
       <div class="tab-panel active" id="core">
@@ -98,7 +98,7 @@
           <article class="card"><div class="num">02 · COMPARATIVE STUDY</div><h3>Indian Companies Following E-Waste Rules</h3><p>Comparative study covering EPR mechanisms, take-back initiatives, RoHS compliance and strategic takeaways.</p><div class="tagrow"><span class="tag">TCS</span><span class="tag">Wipro</span><span class="tag">Reliance</span><span class="tag">Havells</span></div><a class="file-link" href="Indian Companies Following EWASTE.docx" target="_blank">Open report ↗</a></article>
           <article class="card"><div class="num">03 · GLOBAL COMPARISON</div><h3>E-Waste Comparison Overview</h3><p>Country-level comparison covering generation, formal recycling and operational characteristics, with India-focused notes.</p><a class="file-link" href="24120C0086 JayK EWASTE Comparison Overview.pdf" target="_blank">Open comparison ↗</a></article>
           <article class="card"><div class="num">04 · GOVERNANCE</div><h3>Maharashtra E-Waste Paradox</h3><p>State-focused analytical report on the visibility, collection and governance dimensions of Maharashtra's e-waste stream.</p><a class="file-link" href="Maharashtra_EWaste_Paradox.pdf" target="_blank">Open report ↗</a></article>
-          <article class="card"><div class="num">05 · LIVE TOOL</div><h3>State E-Waste Tracker</h3><p>The main Maharashtra district-level tracker: generation, collection, recycling infrastructure, compliance, informal sector, safeguards and awareness.</p><a class="file-link" href="https://e-waste-dashboard-maharashtra--sidefa3096.replit.app" target="_blank">Open live dashboard ↗</a></article>
+          <article class="card"><div class="num">05 · LIVE TOOL</div><h3>State E-Waste Tracker</h3><p>The main Maharashtra district-level tracker: generation, collection, recycling infrastructure, compliance, informal sector, safeguards and awareness.</p><a class="file-link" href="maharashtra-tracker.html" target="_blank">Open Maharashtra tracker ↗</a></article>
           <article class="card"><div class="num">06 · REPORT</div><h3>Tracker Data Analytics Report</h3><p>Methodology and results for the 36-district Maharashtra tracker, including modeled assumptions and limitations.</p><a class="file-link" href="Maharashtra_EWaste_Tracker_Report.docx" target="_blank">Open report ↗</a></article>
           <article class="card"><div class="num">07 · TRACKER FILE</div><h3>Maharashtra Tracker Workbook</h3><p>Eight-sheet workbook with the scorecard, generation inventory, collection log, infrastructure, compliance and community-facing modules.</p><a class="file-link" href="Maharashtra_EWaste_Tracker.xlsx" target="_blank">Open workbook ↗</a></article>
           <article class="card"><div class="num">08 · QUICK LINK</div><h3>Dashboard Reference</h3><p>Compact document containing the Maharashtra state identifier, roll number and live dashboard reference.</p><a class="file-link" href="24102C0086 JayK EWASTE-2.docx" target="_blank">Open file ↗</a></article>
@@ -170,7 +170,7 @@
       <div class="grid">
         <div class="card"><div class="num">STUDENT</div><h3>Jay Keluskar</h3><p>Roll No. 24102C0086<br>Third Year Engineering<br>CMPN - C</p></div>
         <div class="card"><div class="num">REPOSITORY</div><h3>E-WASTE-24102C0086</h3><p>GitHub repository containing the portfolio and original semester artifacts.</p><a class="file-link" href="https://github.com/Jayz-yours/E-WASTE-24102C0086-Jay-Keluskar-TE-CMPN-C" target="_blank" rel="noopener">Visit GitHub ↗</a></div>
-        <div class="card"><div class="num">LIVE SYSTEM</div><h3>Maharashtra E-Waste Tracker</h3><p>External Replit deployment referenced in the submitted tracker documentation.</p><a class="file-link" href="https://e-waste-dashboard-maharashtra--sidefa3096.replit.app" target="_blank" rel="noopener">Open dashboard ↗</a></div>
+        <div class="card"><div class="num">LIVE SYSTEM</div><h3>Maharashtra E-Waste Tracker</h3><p>External Replit deployment referenced in the submitted tracker documentation.</p><a class="file-link" href="maharashtra-tracker.html" target="_blank" rel="noopener">Open Maharashtra tracker ↗</a></div>
       </div>
       <div class="actions" style="margin-top:18px">
         <a class="btn primary" href="https://github.com/Jayz-yours/E-WASTE-24102C0086-Jay-Keluskar-TE-CMPN-C" target="_blank" rel="noopener">GitHub ↗</a>
@@ -185,7 +185,9 @@
     // ReactBits-inspired depth/spotlight interaction — deliberately dependency-free for GitHub Pages.
     const card=document.getElementById('depthCard');
     if(card){card.addEventListener('mousemove',e=>{const r=card.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5;const y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(900px) rotateY(${x*7}deg) rotateX(${-y*7}deg) translateY(-3px)`});card.addEventListener('mouseleave',()=>card.style.transform='')}
-    document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));btn.classList.add('active');document.getElementById(btn.dataset.tab).classList.add('active')}));
+    function activateTab(id){document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===id));document.querySelectorAll('.tab-panel').forEach(p=>p.classList.toggle('active',p.id===id));}
+function syncTab(){const id=location.hash.replace('#','');const valid=['core','analytics','systems','sustainability','casestudies'];activateTab(valid.includes(id)?id:'core');}
+window.addEventListener('hashchange',syncTab);syncTab();
     document.querySelectorAll('[data-search]').forEach(input=>input.addEventListener('input',()=>{const panel=document.getElementById(input.dataset.search);const q=input.value.toLowerCase();panel.querySelectorAll('.card').forEach(c=>c.style.display=c.innerText.toLowerCase().includes(q)?'':'none')}));
     const top=document.getElementById('top');addEventListener('scroll',()=>top.classList.toggle('show',scrollY>500));
   </script>
